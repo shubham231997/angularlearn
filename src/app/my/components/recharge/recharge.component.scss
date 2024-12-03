@@ -1,0 +1,121 @@
+.recharge-container, .savedData {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #737ea1;
+    border-radius: 22px;
+    background-color: #fdadd0;
+    margin-left: 300px;
+    
+  }
+  .header {
+    background-color: #f4f4f4; /* Set a background color */
+    padding: 2px; /* Add some padding around the header */
+  }
+  
+  .header1 ul {
+    list-style: none; /* Remove the default bullets */
+    margin: 0; /* Remove the default margin */
+    padding: 0; /* Remove the default padding */
+    display: flex; /* Use flexbox to arrange items in a row */
+    /* Space out the buttons evenly */
+    width: 2px;
+  }
+  
+  .header1 li {
+    margin: 0 1px; /* Add horizontal space between the buttons */
+  }
+  
+  .header1 button {
+    padding: 2px; /* Add padding to the buttons */
+    font-size: 1em; /* Set font size for the button text */
+    cursor: pointer; /* Change the cursor to a pointer */
+    background-color: #4CAF50; /* Set a background color */
+    color: white; /* Set the text color */
+    border: none; /* Remove the border */
+    border-radius: 5px; /* Add rounded corners */
+    transition: background-color 0.3s ease; /* Add transition for hover effect */
+    margin-left: 250px;
+  }
+  
+  .header1 button:hover {
+    background-color: #45a049; /* Change the background color on hover */
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Create two equal columns */
+    gap: 20px; /* Space between the two columns */
+    padding: 20px;
+  }
+  
+  .class1, .class2 {
+    background-color: #eb1c1c; /* Light background for each class */
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  h2 {
+    color: #333;
+  }
+  
+  
+  h2 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: grid;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  input, select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #8d7b7b;
+    border-radius: 4px;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #5f635f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  .show1{
+    padding: 5px 10px;
+    font-size: 12px;
+    color: #fff;
+    background-color: #007bff; /* Primary Blue */
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  
+  }
+  .hide1{
+    padding: 5px 10px;
+    font-size: 12px;
+    color: #fff;
+    background-color: #007bff; /* Primary Blue */
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  

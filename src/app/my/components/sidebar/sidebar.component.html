@@ -1,0 +1,23 @@
+<div class="Sidebaralpha">
+ 
+<div *ngIf="issidebarvisible" class="sidebar">
+    <ul>
+      
+      <li><a [routerLink]="'/home'">Home</a></li>
+      <li><a routerLink="/payout">Payout</a></li>
+      <li><a routerLink="/aeps">AEPS</a></li>
+      <li><a routerLink="/home/recharge">Recharge</a></li>
+      <li><a routerLink="/bannerenquiry">Banner enquiry</a></li>
+      <li><a routerLink="/payin">Payin</a></li>
+      <li><a href="">DMT</a></li>
+    </ul>
+  </div>
+  
+</div>
+<footer>
+  <div class="showsidebar">
+    <button (click)="hide4()"><i class="fas fa-bars"></i></button>
+    
+  </div>
+</footer>
+  <router-outlet></router-outlet>

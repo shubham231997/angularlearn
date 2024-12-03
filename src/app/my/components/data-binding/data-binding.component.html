@@ -1,0 +1,49 @@
+<div class="row">
+    <div class="col3">
+        one way -from .ts to .html
+
+    </div>
+    <div class="col3">
+
+    </div>
+    <div class="col3">
+
+    
+</div>
+<div class="row">
+    <div class="col3">
+        <div class="row">
+            <div class="col3">
+                interpolation
+                <h4>{{courseName}}</h4>
+                <input type="text" value ="{{courseName}}" placeholder="Enter text"/>
+                <input type="{{inputType}}"/>
+            </div>
+        </div>
+
+    </div>
+    <div class="col3">
+        property boinding
+        div <div [class]="myclassnam"> danger</div>
+        <input type="text" [value]="courseName"/>
+        <input [type]="inputType" >
+
+    </div>
+    <div class="col3">
+        <button class="btn-success"(click)="showAlert('bhag jabhai')">show welcome </button>
+        <button class="btn-success"(click)="showAlert('login password wrong')">sign in</button>
+        <button class="btn-success"(click)="changeCourseName()">Change Course Name</button>
+
+
+
+    </div>
+    <div class="col3">
+        <input type="text" [(ngModel)]="courseName"/> --{{courseName}}
+
+
+
+    </div>
+    
+
+    
+</div>

@@ -1,0 +1,187 @@
+<!-- 
+<header class="header">
+  <div class="header1">
+    <ul>
+      <li ><a [routerLink]="'/home'"><button>home</button></a></li>
+      <li><a routerLink="/recharge"><button>recharge</button></a></li>
+      <li><button>logout</button></li>
+      <li><button>about us</button></li>
+    </ul>
+      
+  </div>
+</header> -->
+<app-sidebar></app-sidebar>
+
+<div class="grid-container">
+  
+<div  class="recharge-container">
+    <h2>{{name}}</h2>
+    <form>
+      <!-- Mobile Number -->
+      <div *ngIf="isamountvisible" class="form-group">
+        <label for="mobileNumber">Mobile Number:</label>
+        <input
+          type="text"
+          id="mobileNumber"
+          name="mobileNumber"
+          [(ngModel)] ="mobileNumber"
+          (input)="updateSavedValue()"
+          placeholder="Enter your mobile number"
+          pattern="[0-9]{10}"
+          title="Mobile number must be 10 digits."
+          [ngModel]="mobileNumber"
+
+          required
+          
+        />
+      </div>
+  
+      <!-- Operator -->
+      <div class="form-group">
+        <label for="operator">Operator:</label>
+        <select id="operator" name="operator" required >
+          <option *ngFor="let list of data">{{list.empName}}</option>
+
+        </select>
+      </div>
+  
+      <!-- Recharge Amount -->
+      <div class="form-group" >
+        <div *ngIf="isamountvisible" class="hideandshow">
+        <label for="amount">Amount:</label>
+        <input
+          type="number"
+          id="amount"
+          name="amount"
+          [(ngModel)] ="amount"
+          (input)="updateamountValue()"
+          placeholder="Enter recharge amount"
+          min="10"
+          required
+        />
+        
+      </div>
+        <div class="showandhide">
+          <button class="show" (click)="showdiv1()">show</button>
+          <button class="hide" (click)="hidediv1()">hide</button>
+        </div>
+      </div>
+  
+      <!-- PIN -->
+       <div class="BIGPIN">
+      <div *ngIf="ispinvisible" class="form-group">
+        <label for="pin">PIN:</label>
+        <input
+          type="password"
+          id="pin"
+          name="pin"
+          placeholder="Enter your 4-digit PIN"
+          pattern="[0-9]{4}"
+          title="PIN must be 4 digits."
+          required
+        />
+      </div>
+      <div class="buttonsforpin">
+        <button class="show2" (click)="showdiv3()" >Show and hide</button>
+        
+      </div>
+      </div>
+      <div class="form-group">
+        <label for="name">Benificiary Name</label>
+        <input 
+        type="text"
+        id="name1"
+        name="name1"
+        [(ngModel)]="name1"
+        (input)="updateNameValue()"
+
+        placeholder="Enter the name"
+        required
+        
+        
+        />
+      </div>
+      <div class="form-group">
+        <label for="calender">type</label>
+        <input 
+        type="text"
+        id="calender"
+        name="calender"
+        [(ngModel)]="calender"
+        (input)="(updatemonthValue())"
+
+
+        />
+      </div>
+      <div class="rm">
+      <div *ngIf="isrechargemonthvisible" class="form-group">
+        <label for="rechargeMonth">MONTH</label>
+        <input type="text"
+        name="rechargeMonth"
+        id="rechargeMonth"
+        [(ngModel)]="rechargeMonth"
+        (input)="(updataerechargemonth())"
+        placeholder="enter your recharge month"
+
+        /> 
+
+      </div>
+
+      <div class="Dropdown1">
+        <select  >
+          <option *ngFor="let city of cityArray" value="">{{city}}</option>
+
+        </select>
+
+      </div>
+      <div class="rechargeplan1">
+       <select >
+        <option *ngFor="let recharge1 of Rechargeplanarray " value="">{{recharge1}}</option>
+
+        
+       </select>
+      </div>
+      <div class="rechargemonth1">
+        <button class="show4" (click)="divshow4()">show and hide</button>
+        
+      </div>
+      
+      </div>
+      <div class="form-group">
+        <label for="dropdown">dropdown</label>
+        <input type="text"
+        id="dropdown"
+        name="dropdown"
+        placeholder="enter your choice"
+        [(ngModel)]="dropdown"
+        (input)="(updateDropdownmonth())"
+        
+
+        />
+
+      </div>
+  
+      <!-- Submit Button -->
+      <button *ngIf="amount && mobileNumber" type="submit" (click)="submit()">Recharge</button>
+    </form>
+    
+  </div>
+    <div class="fullshowhide">
+    <div *ngIf="issavedValue" class="savedData">
+      <label for="savedValue">Saved:</label>
+      <input type="text" [value]="savedValue" name="Saved" placeholder="updated value" readonly/> 
+      <input type="text"[value]="savedamount" placeholder="recharge amount" readonly/> 
+      <input type="text"[value]="savedName" placeholder="Name" readonly>
+      <input type="text "[value]="savedcalender" placeholder="Your monthly/yearly rechage type" readonly>
+      <input type="text"[value]="savedMonth" placeholder="your months will be updated here" readonly />
+      <input type="text"[value]="savedDropdown" readonly>
+    </div>
+    <div class="fullhideandshow">
+      <button>
+        <button class="show1" (click)="showdiv2()">show</button>
+        <button class="hide1" (click)="hidediv2()">hide</button>
+      </button>
+    </div>
+  </div>
+  </div>
+  

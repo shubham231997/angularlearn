@@ -1,0 +1,75 @@
+<p>aeps works!</p>
+<div class="aeps-container">
+    <h2>AEPS Transaction</h2>
+    <form>
+      <!-- Aadhaar Number -->
+      <div class="form-group">
+        <label for="aadhaarNumber">Aadhaar Number:</label>
+        <input
+          type="text"
+          id="aadhaarNumber"
+          name="aadhaarNumber"
+          placeholder="Enter your 12-digit Aadhaar Number"
+          pattern="[0-9]{12}"
+          title="Aadhaar number must be a 12-digit number."
+          required
+        />
+      </div>
+  
+      <!-- Bank Name -->
+      <div class="form-group">
+        <label for="bankName">Bank Name:</label>lp  
+        <input
+          type="text"
+          id="bankName"
+          name="bankName"
+          placeholder="Enter your bank name"
+          pattern="[A-Za-z\s]+"
+          title="Bank name should only contain alphabets."
+          required
+        />
+      </div>
+  
+      <!-- Amount -->
+      <div class="form-group">
+        <label for="amount">Amount:</label>
+        <input
+          type="number"
+          id="amount"
+          name="amount"
+          placeholder="Enter the amount"
+          min="1"
+          required
+        />
+      </div>
+  
+      <!-- Transaction Type -->
+      <div class="form-group">
+        <label for="transactionType">Transaction Type:</label>
+        <select id="transactionType" name="transactionType" required>
+          <option value="" disabled selected>Select transaction type</option>
+          <option value="withdrawal">Withdrawal</option>
+          <option value="deposit">Deposit</option>
+          <option value="balanceCheck">Balance Check</option>
+        </select>
+      </div>
+  
+      <!-- Mobile Number -->
+      <div class="form-group">
+        <label for="mobileNumber">Mobile Number:</label>
+        <input
+          type="text"
+          id="mobileNumber"
+          name="mobileNumber"
+          placeholder="Enter your registered mobile number"
+          pattern="[0-9]{10}"
+          title="Mobile number must be 10 digits."
+          required
+        />
+      </div>
+  
+      <!-- Submit Button -->
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+  
