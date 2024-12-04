@@ -79,6 +79,7 @@
           pattern="[0-9]{4}"
           title="PIN must be 4 digits."
           required
+
         />
       </div>
       <div class="buttonsforpin">
@@ -128,17 +129,38 @@
       </div>
 
       <div class="Dropdown1">
-        <select  >
+        <label for="city">Home town</label>
+        <select id="city" >
+
+          <label for="city"></label>
+          
           <option *ngFor="let city of cityArray" value="">{{city}}</option>
 
+
         </select>
+        <div class="dd1">
+          <label for="currentcity">curent city</label>
+          <select id="currentcity">
+            <option *ngFor="let state of currentstatearray" value="">{{state}}</option>
+          </select>
+
+        </div>
 
       </div>
+      <div class="Dropdown2">
+        <label for="commission">commission Plan</label>
+        
+        <select id="commission">
+          <option *ngFor="let commision of commissionarray" value="">{{commision}}</option>
+        </select>
+      </div>
       <div class="rechargeplan1">
-       <select >
+        <label for="plan">New plan</label>
+
+       <select id="plan">
         <option *ngFor="let recharge1 of Rechargeplanarray " value="">{{recharge1}}</option>
 
-        
+        <option *ngFor="let newplan of newrechargepplanarray" value="">{{newplan}}</option>
        </select>
       </div>
       <div class="rechargemonth1">

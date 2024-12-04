@@ -89,5 +89,10 @@ export class RechargeComponent {
 
   cityArray : string[]= ['Muzaffarpur','patna','begusarai','darbhanga','madhubani' ]  
   Rechargeplanarray : number[] = [149,299,310,299,399,499]
+  commissionarray : number[] = [2.5,5.6,44,5,4,5,5,67,7,]
+  currentstatearray : string[]= ['gurgaon','delhi','noida','gautam buddha nagar']
+  newrechargepplanarray : number[] = [159,219,245,299,333,399]
   
+
+
 }
