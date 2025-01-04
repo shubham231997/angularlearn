@@ -1,0 +1,68 @@
+<form action="" #form="ngForm"  >
+<div class="form_1">
+    <div class="container">
+        <!-- First Name, Middle Name, Last Name in one row -->
+        <p>First Name: <input type="text" name="firstname" #fname="ngModel" id="first_name" [(ngModel)]="studentobj.firstname" required minlength="5" ></p>
+        <div class="text-danger">
+            @if (fname.touched && fname.errors?.['required']) {
+                <span>This is required *</span>
+
+            }
+            @else if (fname.errors?.['minlength']) {
+                <span>Minimum Three characters</span>
+
+            }
+            
+            
+        </div>
+        <p>Middle Name: <input type="text" name="middlename" #lname="ngModel" id="middle_name"[(ngModel)]="studentobj.middlename" required minlength="5"></p>
+        <div class="text-danger">
+            @if (lname.touched && lname.errors?.['required']) {
+                <span>This is mandatory*</span>
+
+            }
+            @else if (lname.errors?.['minlength']) {
+                <span><span>minimum 5 characters</span> </span>
+            }
+            
+            
+        </div>
+        <p>Last Name: <input type="text" name="lastname" id="last_name"[(ngModel)]="studentobj.lastname" required></p>
+        
+
+        <!-- Phone and Email in another row -->
+        <div class="phone-email-row">
+            <p>Phone: <input type="text" name="phone" #phoneno="ngModel" id="phone"[(ngModel)]="studentobj.phone "  required maxlength="10"></p>
+            <div class="text-danger">
+                @if (phoneno.touched && phoneno.errors?.['required']) {
+                    <span>This is mandatory*</span>
+                    
+                }
+                @else if (phoneno.errors?.['maxlength']) {
+                    <span>Only 10 digits allowed</span>
+
+                }
+                
+                
+            </div>
+            <p>Email: <input type="text" name="email" id="email"[(ngModel)]="studentobj.email" required></p>
+        </div>
+        <div class="address-row">
+            <p>Address: <input type="text" name="address" id="address"[(ngModel)]="studentobj.address" required></p>
+        </div>
+        <div class="statecityandziprow">
+            <label for="statelist" >State</label>
+            <select name="state" id="statelist" [(ngModel)]="studentobj.state" >
+                <option value="" disabled selected>Select</option>
+                <option  *ngFor="let statearray of statenamearray" value="select" >{{statearray}}</option>
+            </select>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="reset"  >Reset</button>
+        <button [disabled]="form.invalid" type="submit"  (click)="onSubmit()">Submit</button>
+
+    </div>
+    <div class="col-4"> {{formValue| json}}</div>
+</div>
+</form>

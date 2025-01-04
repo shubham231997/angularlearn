@@ -1,0 +1,90 @@
+/* General styles for the form */
+.form_1 {
+    font-family:cursive;
+    background-color: #f9f9f9;
+    border: 2px solid #e800003b;
+    border-radius: 10px;
+    padding: 23px;
+    max-width: 600px;
+    margin: 20px auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Grid container */
+.container {
+    display: contents;
+    grid-template-columns: repeat(3, 1fr); /* Three columns for First, Middle, and Last Name */
+    gap: 10px; /* Space between elements */
+    align-items: center;
+}
+
+/* Labels and inputs */
+.container p {
+    margin: 0;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Input fields */
+.container input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+/* Input focus effect */
+.container input[type="text"]:focus {
+    border-color: #007bff;
+}
+
+/* Make sure the Phone and Email appear in the second row */
+.container .phone-email-row {
+    grid-column: span 3; /* Ensure this row spans the full width of the grid */
+    display: contents;
+    grid-template-columns: repeat(2, 1fr); /* Two columns for Phone and Email */
+    gap: 10px;
+}
+.container .statecityandziprow{
+    grid-column: span 3; /* Ensure this row spans the full width of the grid */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns for Phone and Email */
+    gap: 10px;
+
+}
+
+/* Button styling */
+.container button {
+    grid-column: span 3; /* Make button span the full width */
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+/* Button hover effect */
+.container button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .form_1 {
+        padding: 15px;
+    }
+    .container {
+        grid-template-columns: 1fr; /* Make all fields stack vertically */
+        gap: 30px;
+    }
+    .container button {
+        grid-column: span 1; /* Adjust button width */
+    }
+}

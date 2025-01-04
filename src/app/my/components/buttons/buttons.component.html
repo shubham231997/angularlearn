@@ -1,0 +1,27 @@
+<p>buttons works!</p>
+<!-- control-flow.component.html -->
+<div class="container">
+    <h1>Control Flow Practice</h1>
+  
+    <div class="button 1">
+    <button (click)="buttonClicked('Button 1')">Button 1</button>
+    <span class="small"><button>show</button>
+    <button>hide</button>
+    </span>
+    </div>
+  
+    <!-- Button for Option 2 -->
+    <button (click)="buttonClicked('Button 2')">Button 2</button>
+  
+    <!-- Button for Option 3 -->
+    <button (click)="buttonClicked('Button 3')">Button 3</button>
+  
+    <!-- Button for Option 4 -->
+    <button (click)="buttonClicked('Button 4')">Button 4</button>
+  
+    <!-- Output of button clicks -->
+    <div class="output">
+      <p>You clicked: {{ clickedButton }}</p>
+    </div>
+  </div>
+  

@@ -8,6 +8,7 @@ import { HomepageComponent } from './my/components/homepage/homepage.component';
 import { DataBindingComponent } from "./my/components/data-binding/data-binding.component";
 import { LoginComponent } from './my/components/login/login.component';
 
+
 @Component({
   selector: 'app-root',
   imports: [SidebarComponent, RouterModule, DataBindingComponent,HomepageComponent,LoginComponent,],

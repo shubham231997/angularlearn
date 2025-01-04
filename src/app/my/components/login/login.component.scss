@@ -1,4 +1,4 @@
-body {
+  body {
     font-family: Arial, sans-serif;
     background: linear-gradient(to right, #ff7e5f, #feb47b); /* Gradient background */
     margin: 0;
@@ -7,6 +7,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    
   }
   
   .login-container {
@@ -15,17 +16,20 @@ body {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     width: 100%;
-    max-width: 400px;
+    max-width: 600px;
+    margin-left :625px;
+    height: 725px ;
   }
   
   .login-container h1 {
     text-align: center;
     color: #333;
-    margin-bottom: 20px;
+   
   }
   
   form div {
     margin-bottom: 15px;
+    
   }
   
   form label {
@@ -38,7 +42,7 @@ body {
   form input {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #744f4f;
     border-radius: 4px;
   }
   
