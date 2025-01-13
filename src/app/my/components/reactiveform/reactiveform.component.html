@@ -1,0 +1,44 @@
+<form action=""   >
+    <div class="form_1">
+        <div class="container">
+            <!-- First Name, Middle Name, Last Name in one row -->
+            <p>First Name: <input type="text" name="firstname"  id="first_name"  required minlength="5" ></p>
+            
+               
+                
+                
+            
+            <p>Middle Name: <input type="text" name="middlename" id="middle_name"required minlength="5"></p>
+           
+            <p>Last Name: <input type="text" name="lastname" id="last_name" required></p>
+            
+    
+            <!-- Phone and Email in another row -->
+            <div class="phone-email-row">
+                <p>Phone: <input type="text" name="phone"  id="phone" required maxlength="10"></p>
+                
+                    
+                    
+                </div>
+                <p>Email: <input type="text" name="email" id="email"required></p>
+            </div>
+            <div class="address-row">
+                <p>Address: <input type="text" name="address" id="address" required></p>
+            </div>
+            <div class="statecityandziprow">
+                <label for="statelist" >State</label>
+                <select name="state" id="statelist"  >
+                    <option value="" disabled selected>Select</option>
+                    <option  *ngFor="let statearray of statenamearray" value="select" >{{statearray}}</option>
+                </select>
+            </div>
+    
+            <!-- Submit Button -->
+            <button type="reset"  >Reset</button>
+            <button  type="submit"  >Submit</button>
+    
+        </div>
+        
+    
+    </form>
+    

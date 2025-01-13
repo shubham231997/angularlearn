@@ -8,6 +8,10 @@
     max-width: 600px;
     margin: 20px auto;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(334deg, #2E026A, #fff8fb, #47755387);
+    background-size: 300% 300%;
+    animation: gradientShift 8s ease infinite;
+    z-index: 1;
 }
 
 /* Grid container */
@@ -16,6 +20,10 @@
     grid-template-columns: repeat(3, 1fr); /* Three columns for First, Middle, and Last Name */
     gap: 10px; /* Space between elements */
     align-items: center;
+    background: linear-gradient(334deg, #2E026A, #fff8fb, #47755387);
+    background-size: 300% 300%;
+    animation: gradientShift 8s ease infinite;
+    z-index: 1;
 }
 
 /* Labels and inputs */
@@ -59,7 +67,7 @@
 /* Button styling */
 .container button {
     grid-column: span 3; /* Make button span the full width */
-    background-color: #0800ff;
+    background-color: #560d24;
     color: white;
     border: none;
     padding: 10px 20px;

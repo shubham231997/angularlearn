@@ -1,0 +1,134 @@
+.glass-container {
+    display: flex;
+    flex-direction: row; /* Default to side-by-side layout */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    overflow: hidden;
+    gap: 20px; /* Add space between the boxes */
+  }
+  .glass-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(334deg, #2E026A, #fff8fb, #47755387);
+    background-size: 300% 300%;
+    animation: gradientShift 8s ease infinite;
+    z-index: 1;
+  }
+  
+  
+  
+  .img-1{
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+  }
+  .info-box,
+  .login-box {
+    position: relaive;
+    z-index: 2;
+    width: 400px;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    background: rgba(255, 255, 255, 0.3); /* Lighter background for contrast */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: black; /* Light text color for better visibility */
+    text-align: center;
+  }
+  .info-box h1 {
+    font-size: 1.8rem;
+  }
+//   .info-box p {
+//     margin: 10px 0;
+//     line-height: 1.5;
+//   }
+  .learn-more-button {
+    margin-top: 20px;
+    color: black;
+    border: 1px solid black;
+    padding: 8px 20px;
+    border-radius: 20px;
+    background: transparent;
+  }
+  .learn-more-button:hover {
+    background: rgba(255, 255, 255, 0.5);
+  }
+  .login-box h2 {
+    margin-bottom: 20px;
+    font-size: 1.6rem;
+  }
+  .full-width {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .actions {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  .forgot-link {
+    color: #007BFF;
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+  .forgot-link:hover {
+    text-decoration: none;
+  }
+//   .login-button {
+//     width: 100%;
+//     padding: 10px;
+//     border-radius: 20px;
+//     background: linear-gradient(145deg, #009cff91, #ff3b00cc);
+//     color: white;
+//     font-weight: bold;
+//   } 
+.login-button {
+    
+    width: 100%;
+    padding: 12px; /* Slightly larger padding for a more premium feel */
+    border-radius: 25px; /* More rounded corners for elegance */
+    background: linear-gradient(145deg, #7a4d5b, #a1b7c566); /* Matches the glass container's colors */
+    color: #F1FAEE; /* Soft white for text, matching the overall theme */
+    font-weight: bold;
+    font-size: 16px; /* Standard size for readability */
+    border: none; /* Clean, borderless design */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Adds depth */
+    cursor: pointer; /* Indicates interactivity */
+    transition: all 0.3s ease; /* Smooth hover and click effects */
+}
+  .login-button:hover {
+    filter: brightness(1.1);
+  }
+  @keyframes gradientShift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .glass-container {
+      flex-direction: column; /* Stack elements vertically */
+      height: auto; /* Allow content to determine height */
+      padding: 20px; /* Add padding for smaller screens */
+    }
+    .info-box,
+    .login-box {
+      width: 100%; /* Full width for smaller screens */
+      max-width: 400px; /* Prevents overly wide boxes */
+    }
+  }
